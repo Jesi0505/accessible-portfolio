@@ -937,3 +937,190 @@ footer nav {
     }
 
 }
+/* =========================================
+   WEATHER DASHBOARD
+   ========================================= */
+
+.weather-status {
+    margin: 1.5rem 0;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+}
+
+.weather-card {
+    margin-top: 2rem;
+
+    padding: 2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--accent)
+        );
+
+    color: white;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    animation: fadeUp 0.5s ease both;
+}
+
+.weather-location {
+    text-align: center;
+
+    margin-bottom: 2rem;
+}
+
+.weather-location h3 {
+    font-size: 2rem;
+
+    margin-bottom: 0.25rem;
+}
+
+.weather-location p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.weather-main {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+.weather-icon {
+    font-size: 4rem;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.temperature {
+    margin: 0;
+
+    font-size: clamp(3rem, 10vw, 5rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+.weather-main p:last-child {
+    margin-top: 0.5rem;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.weather-metrics {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1rem;
+}
+
+.weather-metric {
+    padding: 1.25rem;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: var(--radius-md);
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform var(--transition),
+        background-color var(--transition);
+}
+
+.weather-metric:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.metric-icon {
+    display: block;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.weather-metric h4 {
+    margin-bottom: 0.25rem;
+
+    font-size: 0.95rem;
+}
+
+.weather-metric p {
+    margin: 0;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    font-weight: 800;
+}
+
+.weather-time {
+    margin-top: 1.5rem;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 0.9rem;
+}
+
+
+/* ---------- WEATHER RESPONSIVE ---------- */
+
+@media (min-width: 600px) {
+
+    .weather-card {
+        padding: 3rem;
+    }
+
+    .weather-metrics {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .weather-main {
+        flex-direction: column;
+    }
+
+    .weather-icon {
+        font-size: 3.5rem;
+    }
+
+}
