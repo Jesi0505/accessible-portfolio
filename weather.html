@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Real-time Weather Dashboard by Jesima Yohaana">
+
+    <meta name="author"
+          content="Jesima Yohaana">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <title>Weather Dashboard | Jesima Yohaana</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header>
+    <div class="container">
+
+        <h1>Jesima Yohaana</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="todo.html">To-Do List</a>
+                </li>
+
+                <li>
+                    <a href="weather.html"
+                       aria-current="page">
+                        Weather
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<main id="main-content">
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <h2>Weather Dashboard</h2>
+
+            <p>
+                Search for any city and view its current
+                weather conditions in real time.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section aria-labelledby="weather-heading">
+
+        <div class="container">
+
+            <h2 id="weather-heading">
+                Check Current Weather
+            </h2>
+
+
+            <form id="weather-form">
+
+                <div class="form-group">
+
+                    <label for="city-input">
+                        Enter city name
+                    </label>
+
+                    <input
+                        type="search"
+                        id="city-input"
+                        name="city"
+                        placeholder="Example: Chennai"
+                        autocomplete="address-level2"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Search Weather
+                </button>
+
+            </form>
+
+
+            <div
+                id="weather-status"
+                class="weather-status"
+                role="status"
+                aria-live="polite"
+            >
+                Enter a city to view its weather.
+            </div>
+
+
+            <article
+                id="weather-card"
+                class="weather-card"
+                hidden
+            >
+
+                <div class="weather-location">
+
+                    <h3 id="location-name">
+                        City
+                    </h3>
+
+                    <p id="location-country">
+                        Country
+                    </p>
+
+                </div>
+
+
+                <div class="weather-main">
+
+                    <div class="weather-icon"
+                         id="weather-icon"
+                         aria-hidden="true">
+                        ☀️
+                    </div>
+
+                    <div>
+
+                        <p class="temperature"
+                           id="temperature">
+                            --°C
+                        </p>
+
+                        <p id="weather-description">
+                            Weather
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="weather-metrics">
+
+                    <div class="weather-metric">
+
+                        <span
+                            class="metric-icon"
+                            aria-hidden="true">
+                            💧
+                        </span>
+
+                        <h4>Humidity</h4>
+
+                        <p id="humidity">
+                            --%
+                        </p>
+
+                    </div>
+
+
+                    <div class="weather-metric">
+
+                        <span
+                            class="metric-icon"
+                            aria-hidden="true">
+                            💨
+                        </span>
+
+                        <h4>Wind Speed</h4>
+
+                        <p id="wind-speed">
+                            -- km/h
+                        </p>
+
+                    </div>
+
+
+                    <div class="weather-metric">
+
+                        <span
+                            class="metric-icon"
+                            aria-hidden="true">
+                            🌡️
+                        </span>
+
+                        <h4>Feels Like</h4>
+
+                        <p id="feels-like">
+                            --°C
+                        </p>
+
+                    </div>
+
+
+                    <div class="weather-metric">
+
+                        <span
+                            class="metric-icon"
+                            aria-hidden="true">
+                            ☁️
+                        </span>
+
+                        <h4>Cloud Cover</h4>
+
+                        <p id="cloud-cover">
+                            --%
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="weather-time"
+                   id="weather-time">
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            &copy; 2026 Jesima Yohaana.
+            All rights reserved.
+        </p>
+
+        <nav aria-label="Footer navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+<script src="weather.js"></script>
+
+</body>
+
+</html>
