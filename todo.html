@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Interactive To-Do List application by Jesima Yohaana">
+
+    <meta name="author"
+          content="Jesima Yohaana">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <title>To-Do List | Jesima Yohaana</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header>
+    <div class="container">
+
+        <h1>Jesima Yohaana</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="todo.html" aria-current="page">
+                        To-Do List
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<main id="main-content">
+
+    <section class="hero">
+        <div class="container hero-content">
+
+            <h2>My To-Do List</h2>
+
+            <p>
+                Organize your daily tasks, track progress,
+                and manage your work efficiently.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section aria-labelledby="todo-heading">
+
+        <div class="container">
+
+            <h2 id="todo-heading">Task Manager</h2>
+
+            <form id="todo-form">
+
+                <div class="form-group">
+
+                    <label for="task-input">
+                        Add a new task
+                    </label>
+
+                    <input
+                        type="text"
+                        id="task-input"
+                        name="task"
+                        placeholder="Enter your task..."
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Add Task
+                </button>
+
+            </form>
+
+
+            <div class="todo-controls">
+
+                <div
+                    class="filter-buttons"
+                    role="group"
+                    aria-label="Task filters"
+                >
+
+                    <button
+                        type="button"
+                        class="filter-btn active"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="active"
+                    >
+                        Active
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="completed"
+                    >
+                        Completed
+                    </button>
+
+                </div>
+
+                <p id="task-count" aria-live="polite">
+                    0 tasks
+                </p>
+
+            </div>
+
+
+            <div
+                id="empty-message"
+                class="empty-message"
+                aria-live="polite"
+            >
+                No tasks available.
+            </div>
+
+
+            <ul
+                id="task-list"
+                class="task-list"
+                aria-label="Task list"
+            >
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            &copy; 2026 Jesima Yohaana.
+            All rights reserved.
+        </p>
+
+        <nav aria-label="Footer navigation">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+<script src="todo.js"></script>
+
+</body>
+</html>
